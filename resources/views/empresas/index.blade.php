@@ -36,13 +36,10 @@
                                         <strong>Situación Fiscal:</strong> {{ $empresa->situacion_fiscal }} <br>
                                         <strong>Domicilio:</strong> {{ $empresa->domicilio }} <br>
                                     </p>
-<<<<<<< HEAD
-                                    <!-- Ajusta la altura y el ancho de la imagen -->
-                                    <img src="{{ asset('storage/' . $empresa->imagen) }}" alt="{{ $empresa->nombre }}" class="img-fluid card-img-custom">
-=======
+
                                     <img src="{{ asset('storage/' . $empresa->imagen) }}" alt="{{ $empresa->nombre }}"
                                          class="card-img" style="width: 50%; height: 150px;">
->>>>>>> ccfcf453d003645cb3fa4e60ce544b0c22d577d2
+
                                 </div>
                                 <div class="card-footer text-muted">
                                     ID: {{ $empresa->id_empresa }}
