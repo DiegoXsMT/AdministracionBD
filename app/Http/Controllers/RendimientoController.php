@@ -4,14 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class Rendimiento extends Controller
+class RendimientoController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $rendimiento=RendimientoController::class;
+        return view('Rendimiento.index',compact('rendimiento'));
     }
 
     /**

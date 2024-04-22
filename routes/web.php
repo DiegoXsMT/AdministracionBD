@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EmpresaController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -27,4 +28,7 @@ Route::get('/inversiones', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/rendimiento', [App\Http\Controllers\RendimientoController::class,'index'])->name('rendimiento.index');
 
+
+Route::resource('empresas', EmpresaController::class)->only(['index', 'create', 'store']);
