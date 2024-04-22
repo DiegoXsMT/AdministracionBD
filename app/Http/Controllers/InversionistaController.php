@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Inversionista;
 use Illuminate\Http\Request;
 
 class InversionistaController extends Controller
@@ -11,7 +12,8 @@ class InversionistaController extends Controller
      */
     public function index()
     {
-        //
+        $inversionista=Inversionista::all();
+        return view('inversiones.index',compact('inversionista'));
     }
 
     /**

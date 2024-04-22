@@ -37,7 +37,7 @@
                     <button type="button" class="btn btn-success">Ingresa Dinero a tu cuenta</button>
                 </div>
                 <div class="row " style="margin-top: 3rem;margin-left: 3rem">
-                    <span> ¿Tienes algun problema? <a href="" style="margin-left: 1rem">Contactanos</a></span>
+                    <span> ¿Tienes algun problema? <a href="" style="margin-left: 2rem">Contactanos</a></span>
                 </div>
             </div>
 

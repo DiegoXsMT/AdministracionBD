@@ -36,7 +36,7 @@
                                         <strong>Domicilio:</strong> {{ $empresa->domicilio }} <br>
                                     </p>
                                     <!-- Ajusta la altura y el ancho de la imagen -->
-                                    {{--<img src="{{ asset('storage/' . $empresa->imagen) }}" alt="{{ $empresa->nombre }}" class="img-fluid card-img-custom">--}}
+                                    <img src="{{ asset('storage/' . $empresa->imagen) }}" alt="{{ $empresa->nombre }}" class="img-fluid card-img-custom">
                                 </div>
                                 <div class="card-footer text-muted">
                                     ID: {{ $empresa->id_empresa }}

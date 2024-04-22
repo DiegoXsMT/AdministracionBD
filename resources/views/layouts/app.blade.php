@@ -14,7 +14,7 @@
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
     <!-- Scripts -->
-    {{--@vite(['resources/sass/app.scss', 'resources/js/app.js'])--}}
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
@@ -23,13 +23,13 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-<<<<<<< HEAD
+
                 <a class="navbar-brand" href="{{ url('/') }}" style="margin-left: 13rem">
                     <span>Inversiones</span>
-=======
+
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('', 'Mexicana de Inverciones') }}
->>>>>>> d9fcc9da43296eb69b8b3690333e7af5c5bb24f5
+
                 </a>
                 <a class="navbar-brand" href="{{ url('') }}" style="margin-left: 13rem">
                     <span>Mi cuenta</span>

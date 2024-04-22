@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Rendimiento;
 use Illuminate\Http\Request;
 
 class RendimientoController extends Controller
@@ -11,8 +12,7 @@ class RendimientoController extends Controller
      */
     public function index()
     {
-        $rendimiento=RendimientoController::class;
-        return view('Rendimiento.index',compact('rendimiento'));
+       return view('rendimientos.index');
     }
 
     /**
