@@ -20,6 +20,10 @@ Route::get('/historial_ventas', function () {
     return view('historial.historial');
 });
 
+Route::get('/inversiones', function () {
+    return view('inversiones.index');
+});
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
