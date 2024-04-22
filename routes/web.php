@@ -13,4 +13,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/rendimiento', [App\Http\Controllers\RendimientoController::class,'index'])->name('rendimiento.index');
 

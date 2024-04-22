@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class Inversionista extends Controller
+class InversionistaController extends Controller
 {
     /**
      * Display a listing of the resource.
