@@ -13,6 +13,12 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/mercado_actual', function () {
     return view('mercado_actual');
 });
+Route::get('/historial', function () {
+    return view('historial.index');
+});
+Route::get('/historial_ventas', function () {
+    return view('historial.historial');
+});
 
 Auth::routes();
 
