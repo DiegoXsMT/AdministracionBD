@@ -16,7 +16,6 @@
                 <div class="navbar-nav">
                     <a class="nav-link active" aria-current="page" href="#">Volver A Inicio</a>
                     <a class="nav-link" href="#">Mi cuenta</a>
-                    <a class="nav-link" href="#">Criptodivisas</a>
                     <a class="nav-link" href="#">Análisis</a>
                     <a class="nav-link" href="#">Contacto</a>
                 </div>
