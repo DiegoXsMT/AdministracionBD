@@ -22,40 +22,39 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-
+                <a class="navbar-brand" href="{{ url('home') }}">
+                    {{ config('', 'Mexicana de inversiones') }}
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
-                        <!-- Authentication Links -->
-                        <a class="navbar-brand" href="{{ url('/') }}">
-                            {{ config('', 'Mexicana de invesiones') }}
-                        </a>
-                        <li class="nav-item">
+                <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+                    @auth
+                        <ul class="navbar-nav">
+                            <!-- Your other navigation items -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">{{ __('Inicio') }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">{{ __('Mercado') }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">{{ __('Asesorias') }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/home">{{ __('Analisis') }}</a>
+                            </li>
+                        </ul>
+                    @endauth
 
-                            <a class="nav-link " href="#">{{ __('Inicio') }}</a>
-                        </li>
-                        <li class="nav-item">
-
-                            <a class="nav-link " href="#">{{ __('Mercado') }}</a>
-                        </li>
-                        <li class="nav-item">
-
-                            <a class="nav-link " href="#">{{ __('Asesorias') }}</a>
-                        </li>
-                        <li class="nav-item">
-
-                            <a class="nav-link " href="/home">{{ __('Analisis') }}</a>
-                        </li>
+                    <!-- Login item is always on the right -->
+                    <ul class="navbar-nav ml-auto" style="position: absolute; right: 10px;"> <!-- Added ml-auto here -->
                         @guest
                             @if (Route::has('login'))
-                                <li class="nav-item align-content-xl-">
-
+                                <li class="nav-item">
                                     <a class="nav-link" href="{{ route('login') }}">{{ __('Inicio de sesion') }}</a>
                                 </li>
                             @endif
@@ -68,8 +67,7 @@
 
                                 <div class="dropdown-menu dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
-                                                         document.getElementById('logout-form').submit();">
+                                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                         {{ __('Cerrar sesión') }}
                                     </a>
 
@@ -78,13 +76,10 @@
                                     </form>
                                 </div>
                             </li>
-
-
                         @endguest
                     </ul>
                 </div>
             </div>
-
         </nav>
 
         <main class="py-4">
